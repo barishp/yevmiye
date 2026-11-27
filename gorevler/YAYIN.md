@@ -1,19 +1,11 @@
 # Yayın usulü (üç görev için ortak)
 
-Bu depo (barishp/yevmiye) Rehber Gündemi Yevmiye’nin tek kaynağıdır. Site `docs/` klasöründedir. `main` dalına gönderilen her değişiklik birkaç dakika içinde GitHub Pages ile https://barishp.github.io/yevmiye/ adresinde yayına çıkar.
+Yayın yeri claude.ai sitesidir: https://claude.ai/artifact/KHk1NvjNZuk6rknFBzpJnR (okurlar yevmiye.barispartal.com adresinden açar). Bu depo (barishp/yevmiye) yalnızca talimatların durduğu yerdir. Depoya hiçbir şey commit etme ve push etme. Depodaki `docs/` klasörü 28 Kasım 2026'da bırakılmış eski bir kopyadır; ondan okuma, ona yazma.
 
 1. **Önce oku:** kökteki `CLAUDE.md` ve `Rehber_Gundemi_Yevmiye_Tam_Talimat.md`. Görev metni ile talimat çelişirse görev metni geçerlidir.
-2. **Dosya yolları:** Görev metninde geçen `yevmiye/…`, `haftalik/…`, `sayilar/…` ve `index.html` yolları depoda `docs/` altındadır (ör. `docs/yevmiye/liste.json`). `liste.json` içindeki `"dosya"` alanı ise `docs/` olmadan yazılır (ör. `"yevmiye/2026-11-28.html"`).
-3. **Yalnızca kendi dosyalarına dokun:** yeni sayı dosyası ve ilgili `liste.json`. Kabuk dosyalarını (`docs/index.html`, `docs/css/`, `docs/js/`, `docs/img/`) değiştirme. Gündem’de görsel kullandıysan `docs/img/…` altına yeni dosya ekleyebilirsin.
-4. **Yerel kontrol:** `cd docs && python3 -m http.server 8000`. Ardından Playwright ile `http://localhost:8000/index.html#<bölüm>-YYYY-MM-DD` sayfasını aç. Sayının yüklendiğini ve JS hatası olmadığını doğrula.
-5. **Yayımla:**
-   ```
-   git add docs
-   git commit -m "<Bölüm> YYYY-MM-DD"
-   git pull --rebase origin main
-   git push origin main
-   ```
-   `main`’e doğrudan gönder; ayrı dal ya da PR açma. Gönderim reddedilirse yeniden `git pull --rebase` yap ve tekrar dene. Yine olmazsa nedenini özetle yaz ve dur.
-6. **Doğrula:** 2–3 dakika bekle. Ardından `curl -s https://barishp.github.io/yevmiye/<ilgili>/liste.json` ile yeni tarihin göründüğünü kontrol et. Görünmüyorsa birkaç dakika daha bekleyip bir kez daha dene.
-7. **Künye ve imza:** Barış’ın adı ve kişisel e-postası hiçbir yerde künyeye yazılmaz. Yayını “yapay zekâ robotu Lâlâ” hazırlar; hedef kitle profesyonel turist rehberleri ve sektör paydaşlarıdır.
-8. **Bitiş özeti:** Türkçe ve kısa olsun: yayımlanan tarih, öne çıkanlar, doğrulanamayanlar ve yayın adresi.
+2. **Siteyi oku:** Artifact aracı yüklü değilse ToolSearch ile yükle. Önce sayfayı oku (action "read", yalnız url); yayımlama için bu okuma şarttır. Sonra action "read" + paths ile ilgili `liste.json` dosyasını ve gereken son sayıları indir. Yollar sitedeki yollardır: `yevmiye/…`, `haftalik/…`, `sayilar/…`, `img/…`. Hedef tarih listede zaten varsa hiçbir şey yayımlama, bunu bildir ve bitir.
+3. **Yerel kontrol:** Yeni dosyayı ve güncellenmiş liste.json’u geçici bir çalışma klasörüne, sitedeki yollarıyla yaz (ör. `<klasör>/yevmiye/2026-11-29.html`). HTML etiket dengesini Python HTMLParser ile kontrol et. İstersen sitenin `index.html`, `css/`, `js/` dosyalarını da indirip `python3 -m http.server` ve Playwright ile sayfanın açıldığını ve JS hatası olmadığını doğrula.
+4. **Yayımla:** Artifact aracıyla action "publish", url yukarıdaki adres. `file_path` olarak 2. adımda indirdiğin `index.html` dosyasını DEĞİŞTİRMEDEN ver (araç sayfa dosyası istemeden yayımlamaz). `root` çalışma klasörü olsun, `files` haritasında yalnız kendi dosyaların bulunsun (ör. `{"yevmiye/2026-11-29.html": "yevmiye/2026-11-29.html", "yevmiye/liste.json": "yevmiye/liste.json"}`). Başka hiçbir dosyayı gönderme ya da silme. Doctype uyarısı beklenir, sorun değildir. Çakışma olursa sayfayı yeniden oku, liste.json’u en güncel sürümün üzerine yeniden kur ve tekrar yayımla.
+5. **Doğrula:** Sitedeki liste.json’u yeniden okuyup yeni tarihin başta olduğunu ve index.html’in değişmediğini kontrol et.
+6. **Künye ve imza:** Barış’ın adı ve kişisel e-postası hiçbir yerde künyeye yazılmaz. Yayını “yapay zekâ robotu Lâlâ” hazırlar; hedef kitle profesyonel turist rehberleri ve sektör paydaşlarıdır.
+7. **Bitiş özeti:** Türkçe ve kısa olsun: yayımlanan tarih, öne çıkanlar, doğrulanamayanlar. Bir şey ters giderse yayımlama, nedenini yaz.
