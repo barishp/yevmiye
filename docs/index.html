@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YEVMIYE</title>
+<meta name="description" content="Türkiye’de ve dünyada rehberlikte gelişmeler · kaynaklı mesleki yayın. Yevmiye her akşam, YEVMİYE Nostaljik her salı, YEVMİYE Gündem her cuma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="mast">
+  <div class="wrap mast-in">
+    <p class="wordmark"><span class="wm-l1">Rehber <span>Gündemi</span></span><span class="sr-only"> </span><span class="wm-l2" aria-hidden="true"><i>Y</i><i>E</i><i>V</i><i>M</i><i class="r">İ</i><i>Y</i><i>E</i></span><span class="sr-only">Yevmiye</span><picture class="wm-fig" aria-hidden="true"><source media="(prefers-reduced-motion: reduce)" srcset="img/lala-cizgi-sabit.png"><img src="img/lala-cizgi.webp" alt="" width="230" height="320"></picture></p>
+    <p class="mast-sub">Türkiye’de ve dünyada rehberlikte gelişmeler · kaynaklı mesleki yayın</p>
+  </div>
+  <div class="datebar"><div class="wrap"><span id="issue-date">13 Kasım 2026, Cuma</span><span class="weekly"><span>Yevmiye her akşam ·</span> <span>YEVMİYE Nostaljik her salı ·</span> <span>YEVMİYE Gündem her cuma</span></span></div></div>
+</header>
+<div class="draft-banner" id="draft-banner" hidden><div class="wrap">Taslak · onay bekliyor, yayımlanmadı</div></div>
+
+<nav class="secnav" aria-label="Bölümler">
+  <div class="wrap secnav-in">
+    <button type="button" data-go="yevmiye" class="to-yevmiye">Yevmiye</button>
+    <button type="button" data-go="haftalik" class="to-haftalik" hidden>Nostaljik</button>
+    <button type="button" data-go="s-manset">Manşet</button>
+    <button type="button" data-go="s-turkiye">Türkiye</button>
+    <button type="button" data-go="s-dunya">Dünya</button>
+    <button type="button" data-go="s-kuresel">Küresel</button>
+    <button type="button" data-go="s-dijital">Dijital ve yeşil</button>
+    <button type="button" data-go="s-takvim">Takvim</button>
+    <button type="button" data-go="s-analiz">Analiz</button>
+    <button type="button" data-go="s-kaynaklar">Kaynaklar</button>
+    <button type="button" data-go="arsiv" class="to-archive">Arşiv</button>
+  </div>
+</nav>
+
+<section class="wrap yevmiye" id="yevmiye" aria-label="Yevmiye: günlük İstanbul rehber bülteni" hidden>
+  <div id="yv-box"></div>
+  <div class="yv-actions">
+    <button type="button" id="yv-toggle" aria-expanded="false" aria-controls="yv-box">Yevmiye’nin tamamını oku · 4–5 dk</button>
+    <nav class="yv-arch" id="yv-arch" aria-label="Geçmiş Yevmiyeler">
+      <a class="yv-arch-go" href="#arsiv-yevmiye">Yevmiye arşivi →</a>
+    </nav>
+  </div>
+</section>
+
+<section class="wrap haftalik" id="haftalik" aria-label="YEVMİYE Nostaljik: haftalık İstanbul tarih, mevsim ve araştırma bülteni" hidden>
+  <div id="hf-box"></div>
+  <div class="hf-actions">
+    <button type="button" id="hf-toggle" aria-expanded="false" aria-controls="hf-box">YEVMİYE Nostaljik’in tamamını oku · 12–15 dk</button>
+    <nav class="hf-arch" id="hf-arch" aria-label="Geçmiş YEVMİYE Nostaljik sayıları">
+      <a class="hf-arch-go" href="#arsiv-haftalik">Nostaljik arşivi →</a>
+    </nav>
+  </div>
+</section>
+
+<main class="wrap" id="issue" aria-live="polite">
+  <p class="loading">Sayı yükleniyor…</p>
+</main>
+
+<section class="wrap archive" id="archive" hidden aria-labelledby="archive-title">
+  <h2 class="band"><span class="t" id="archive-title">Arşiv</span><span class="s">YEVMİYE Gündem sayıları</span></h2>
+  <ol class="archive-list" id="archive-list"></ol>
+
+  <div class="yv-arsiv" id="yv-arsiv" aria-labelledby="yv-arsiv-title">
+    <h2 class="band"><span class="t" id="yv-arsiv-title">Yevmiye</span><span class="s">Günlük İstanbul rehber bülteni</span></h2>
+    <ol class="archive-list yv-list" id="yv-list"></ol>
+  </div>
+
+  <div class="hf-arsiv" id="hf-arsiv" aria-labelledby="hf-arsiv-title">
+    <h2 class="band"><span class="t" id="hf-arsiv-title">YEVMİYE Nostaljik</span><span class="s">Haftalık İstanbul tarih, mevsim ve araştırma bülteni</span></h2>
+    <ol class="archive-list hf-list" id="hf-list"></ol>
+  </div>
+
+  <div class="old" aria-labelledby="old-title">
+    <h2 class="band"><span class="t" id="old-title">Eski Rehber Gündemi</span><span class="s">rehbergundemi.com · 2010–2023</span></h2>
+    <p class="old-intro">Rehber Gündemi 2010’dan 2023’e kadar rehbergundemi.com adresinde yayımlandı. O dönemin yazı ve haberleri aşağıda yayın yılına göre, en yenisi üstte olacak biçimde sıralı. Eski site artık açık olmadığı için başlıklar Internet Archive’daki (Wayback Machine) kayıtlara gider.</p>
+    <div class="old-tools">
+      <label class="old-search"><span>Başlıklarda ara</span><input type="search" id="old-search" placeholder="Örneğin: Ayasofya, TUREB, 1618" autocomplete="off"></label>
+      <button type="button" id="old-toggle">Bütün yılları aç</button>
+    </div>
+    <p class="old-status" id="old-status" aria-live="polite"></p>
+    <div id="old-years"><p class="loading">Eski yazılar yükleniyor…</p></div>
+    <div class="old-notes" id="old-notes">
+      <p><b>Arşiv notu.</b> “Arşivde başlık ve özet” ya da “Arşivde yalnız başlık” işaretli yazılarda bağlantı, yazının tamamına değil başlığın göründüğü liste sayfasına gider. “RSS kaydı” işaretliler sitenin RSS akışında korunmuştur. Bazı yazıların yayın günü kaynaklarda farklı kayıtlıdır; bu tarihler yazının yanında gösterilir. Internet Archive bağlantılarının erişimi zaman içinde değişebilir.</p>
+      <p id="old-pages"></p>
+    </div>
+  </div>
+</section>
+
+<nav class="wrap issue-nav" id="issue-nav" aria-label="Sayılar arasında gezinme"></nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Rehber Gündemi Yevmiye</b> · Yapay Zeka botu Lâlâ yayınıdır · Yevmiye her akşam, YEVMİYE Nostaljik her salı sabahı, YEVMİYE Gündem her cuma sabahı güncellenir.</p>
+    <p>Bağımsız, derleme bir yayındır; hiçbir kurum, kuruluş, meslek odası ya da dernekle organik bağı yoktur. İçeriğin sorumluluğu yayımlayana aittir.</p>
+    <p>Bilgiler her sayının tarihinde erişilebilen kaynaklara dayanır; etkinlik ve başvuru koşulları değişebilir. Köşeli parantezli numaralar ve mavi bağlantılar özgün kaynaklara gider.</p>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+<script src="js/dil.js"></script>
+</body>
+</html>
