@@ -654,7 +654,7 @@ Her madde:
 
 ## 8. OTOMATİK GÖREVLER
 
-**Şu anki görevler (27 Kasım 2026’dan beri).** Görevler claude.ai’nin **bulut görevleridir (routine)**. Bulutta çalışırlar; bilgisayarın açık olması gerekmez. Her çalıştırma `barishp/yevmiye` deposunu kopyalar, sayıyı yazar ve `main` dalına gönderir. Site GitHub Pages ile birkaç dakika içinde güncellenir. Barış görevleri telefondan https://claude.ai/code/routines adresinde görebilir.
+**Şu anki görevler (27 Kasım 2026 akşamından beri).** Görevler claude.ai’nin **bulut görevleridir (routine)**. Bulutta çalışırlar; bilgisayarın açık olması gerekmez. Her çalıştırma talimatları `barishp/yevmiye` deposundan okur, sayıyı yazar ve **claude.ai sitesine (KHk1NvjNZuk6rknFBzpJnR) Artifact aracıyla** yayımlar. Depoya hiçbir şey yazmaz; bu yüzden GitHub yazma izni gerekmez. Barış görevleri telefondan https://claude.ai/code/routines adresinde görebilir.
 
 | Görev | Kimlik | Çalışma (İstanbul saati) | Talimat dosyası |
 |---|---|---|---|
@@ -663,8 +663,8 @@ Her madde:
 | YEVMİYE Gündem haftalık sayı | `trig_01GDaEp6ntNBujYzvGKYHXcp` | cuma 05.13 | `gorevler/gundem-cuma.md` |
 
 - Görevin kendi metni kısadır: ilgili `gorevler/*.md` dosyasını ve ortak yayın usulünü (`gorevler/YAYIN.md`) okuyup uygulamasını söyler. **Bir görevin işini değiştirmek için yalnızca depodaki dosyayı düzenlemek yeter.** Bu düzenleme GitHub’dan telefonla da yapılabilir.
-- Claude GitHub uygulamasının `barishp/yevmiye` deposuna erişimi olmalıdır (27 Kasım 2026’da verildi). Erişim kalkarsa görev sayıyı yazar ama yayımlayamaz ve telefona bildirim gönderir.
-- Görevler 22 Kasım 2026’da telefondan sohbet tarafında kurulmuştu ve 27 Kasım’a kadar claude.ai sitesine yazıyordu. Aynı işi yapan bilgisayardaki üç zamanlanmış görev (`yevmiye-gunluk`, `yevmiye-nostaljik-haftalik`, `yevmiye-gundem-cuma`) bulut görevleri depoya yazmaya başlayınca kapatıldı.
+- **Yedekler:** Her gün 19.00’da çalışan ikinci bir bulut görevi (`trig_016tnNeXtMruJnkQmKQubMvF`, “Yevmiye (her akşam, bulut)”) ve bilgisayardaki üç zamanlanmış görev (`yevmiye-gunluk`, `yevmiye-nostaljik-haftalik`, `yevmiye-gundem-cuma`) de aynı siteye yazar. Hepsi önce o tarihin sayısı var mı diye bakar; varsa yayımlamaz. Böylece biri takılırsa öteki çıkarır, sayı iki kez çıkmaz.
+- 27 Kasım 2026’da yayın bir günlüğüne GitHub Pages’e (barishp.github.io/yevmiye) taşınmak istendi. Claude GitHub uygulamasının depoya yazma izni alınamadığı için aynı akşam vazgeçildi. Depodaki `docs/` klasörü o günden kalma eski bir kopyadır.
 - **Eski hesabın bulut görevleri** (`trig_01EqA2pjARnCKqTNPs5hMfLn`, `trig_016KYVq2orUNuZ7G6Q6Bp4Yj`, `trig_019X4jQQwuCnMotrKuJAE4Bo`) erişilemeyen hesapta kaldı. O hesapta görevler bulutta çalıştığı için bilgisayarın açık durması gerekmiyordu.
 - Her görevin talimatı şu sırayla kurulur: görev ve tarih → kaynak belge (bu belge) → siteler ve dokunulacak klasör → içerik özeti (ilgili bölüm) → dosya biçimi → adımlar (oku, araştır, yaz, denetle, taslağa yayımla, Barış’a bildir, dur, onayla yayına al) → yasaklar (onaysız yayın yok, paylaşım ayarına dokunma yok, başka yerde yayımlama/paylaşma/e-posta yok, onaysız e-posta bilgisi yok, kişisel bilgi dışarı yok).
 - Bir görev yeniden kurulacaksa yukarıdaki saat ve bu yapı kullanılır; içerik bu belgenin ilgili bölümünden (cuma: 2 ve 5; akşam: 6; salı: 7) alınır.
@@ -711,6 +711,7 @@ Her madde:
 **27 Kasım 2026**
 - Talimat, yeni hesaptaki gerçek duruma göre güncellendi ve `OneDrive\Documents\barispartal.com\yevmiye\` klasörüne kondu. Bu klasördeki kopya geçerli kopyadır.
 - Sitede o gün: 14 Yevmiye (14–27 Kasım), 3 Nostaljik (10, 17, 24 Kasım), 3 Gündem (13, 20, 27 Kasım), eski arşivde 748 yazı.
+- GitHub Pages denemesi aynı akşam bırakıldı (yazma izni alınamadı). Yayın claude.ai sitesinde kaldı; üç bulut görevi bu siteye Artifact aracıyla yazacak şekilde değiştirildi. Talimatlar `barishp/yevmiye` deposunda durmaya devam ediyor.
 
 ---
 
@@ -720,14 +721,14 @@ Projenin özel talimat alanına şu metin yapıştırılır:
 
 claude.ai’de bir Proje açılır (önerilen ad: “RG Yevmiye”). Bu belge Projenin bilgi alanına yüklenir ve aşağıdaki metin Projenin talimat alanına yapıştırılır. Telefondan açılan bütün Yevmiye sohbetleri o Projenin içinde başlatılır.
 
-**Güncel metin (27 Kasım 2026, GitHub’a geçişten sonra):** Telefondaki sohbetler siteyi doğrudan düzenlemez; depoda çalışan tek seferlik bir bulut görevi kurar.
+**Güncel metin (27 Kasım 2026 akşamı):**
 
 ```
 REHBER GÜNDEMİ YEVMİYE — PROJE TALİMATI
 Kullanıcı Barış'tır. Her zaman Türkçe yanıt ver.
-Yayın artık GitHub deposu barishp/yevmiye'dedir; site https://barishp.github.io/yevmiye/ (yevmiye.barispartal.com). Eski claude.ai sitesine (KHk1NvjNZuk6rknFBzpJnR) yazma.
-Bir sayıya ekleme, düzeltme ya da yeni bir iş istendiğinde: barishp/yevmiye deposunda çalışan tek seferlik bir bulut görevi (routine) kur. Görev önce depodaki CLAUDE.md, Rehber_Gundemi_Yevmiye_Tam_Talimat.md ve gorevler/YAYIN.md dosyalarını okusun, değişikliği yapsın ve main dalına göndersin.
-Düzenli görevlerin işini değiştirmek için depodaki gorevler/*.md dosyasını değiştiren bir görev kur.
+Site: https://claude.ai/artifact/KHk1NvjNZuk6rknFBzpJnR (okurlar yevmiye.barispartal.com adresinden açar). Siteyi Artifact aracıyla oku ve yayımla.
+Her işten önce projedeki Rehber_Gundemi_Yevmiye_Tam_Talimat.md belgesini oku ve uygula.
+Bir sayıya ekleme ya da düzeltme istendiğinde: siteyi oku, yalnızca ilgili sayının dosyasını (ve gerekirse liste.json'u) değiştir, yayımla. Tasarım dosyalarına (index.html, css, js, img) Barış açıkça istemeden dokunma.
 Barış'ın adı ve kişisel e-postası künyede yer almaz; yayını yapay zekâ robotu Lâlâ hazırlar.
 ```
 
